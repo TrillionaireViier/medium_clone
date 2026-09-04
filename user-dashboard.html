@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writer Dashboard — Medium Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <header class="navbar reading-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 1043.63 592.71" width="45" height="25">
+                        <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94" fill="var(--text-primary)"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-right" id="nav-right">
+                <!-- Injected by auth.js -->
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <a href="#" class="sidebar-link active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Stories
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+                    Stats
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    Earnings
+                </a>
+            </div>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <div>
+                    <h1 id="welcome-msg" style="font-family: var(--font-sans);">Welcome, Writer</h1>
+                    <p style="color: var(--text-secondary);">Manage your stories and check your stats.</p>
+                </div>
+                <button class="btn-primary">Write a story</button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">Total Views</div>
+                    <div class="value">14,230</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Total Reads</div>
+                    <div class="value">9,842</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Total Claps</div>
+                    <div class="value">450</div>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 16px;">Your Stories</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Published Date</th>
+                            <th>Views</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 500;">The Architecture of Tomorrow</td>
+                            <td style="color: var(--text-muted);">Oct 12, 2026</td>
+                            <td>12,400</td>
+                            <td><span class="badge active">Published</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 500;">Draft: Introduction to Web Components</td>
+                            <td style="color: var(--text-muted);">--</td>
+                            <td>0</td>
+                            <td><span class="badge" style="background: rgba(255,255,255,0.1);">Draft</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = getCurrentUser();
+            if (!user) {
+                window.location.href = 'login.html';
+                return;
+            }
+            document.getElementById('welcome-msg').textContent = `Welcome, ${user.username}`;
+        });
+    </script>
+</body>
+</html>
