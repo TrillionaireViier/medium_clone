@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Architecture of Tomorrow — Medium Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="article-page">
+    <!-- Top Navigation (Simplified for reading) -->
+    <header class="navbar reading-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 1043.63 592.71" width="45" height="25">
+                        <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94" fill="#000"/>
+                    </svg>
+                </a>
+                <div class="nav-search hidden-mobile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="icon-btn" title="Write"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></button>
+                <button class="icon-btn" title="Notifications"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button>
+                <img class="avatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&h=80&fit=crop" alt="Profile">
+            </div>
+        </div>
+    </header>
+
+    <main class="article-container">
+        <!-- Author Info -->
+        <div class="author-block">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop" alt="Author">
+            <div class="author-details">
+                <div class="author-name">David Chen <button class="btn-follow">Follow</button></div>
+                <div class="article-meta">Published in <span>Towards Data Science</span> · 8 min read · Oct 12, 2026</div>
+            </div>
+        </div>
+
+        <!-- Article Action Bar -->
+        <div class="article-actions">
+            <div class="actions-left">
+                <button class="action-btn" id="clap-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                    <span id="clap-count">4.2K</span>
+                </button>
+                <button class="action-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>128</span>
+                </button>
+            </div>
+            <div class="actions-right">
+                <button class="action-btn" title="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+                <button class="action-btn" title="Listen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></button>
+                <button class="action-btn" title="Share"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></button>
+            </div>
+        </div>
+
+        <!-- Article Content -->
+        <article class="article-content">
+            <h1>The Architecture of Tomorrow: Building Scalable Systems in 2026</h1>
+            <h2 class="subtitle">A deep dive into distributed systems, serverless paradigms, and the evolving role of AI in software architecture.</h2>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop" alt="Abstract networking">
+                <figcaption>Photo by Unsplash</figcaption>
+            </figure>
+
+            <p class="drop-cap">The landscape of software engineering has shifted dramatically over the past few years. What used to be considered best practices are now viewed as legacy patterns, replaced by highly distributed, event-driven architectures that scale infinitely and cost almost nothing when idle.</p>
+            
+            <p>In this article, we'll explore the core tenets of modern system design and how you can implement them in your next project.</p>
+
+            <h3>1. The Shift to Fully Serverless</h3>
+            <p>We are no longer provisioning servers or managing Kubernetes clusters for the vast majority of web applications. The abstraction level has risen. We now deploy code directly to edge networks, and databases are entirely serverless, scaling horizontally without manual intervention.</p>
+            
+            <blockquote>
+                "The best infrastructure is the one you don't have to manage."
+            </blockquote>
+
+            <p>Consider the architecture of a modern e-commerce platform. Instead of a monolithic database, we use distributed key-value stores at the edge for product catalogs, and transactional serverless SQL for checkout flows. This ensures single-digit millisecond latency worldwide.</p>
+
+            <h3>2. AI-Driven Optimization</h3>
+            <p>Perhaps the most exciting development is the integration of AI into the infrastructure layer itself. Modern orchestrators analyze traffic patterns in real-time and predictive-scale resources before a spike even hits.</p>
+            
+            <pre><code>// Example of an AI-optimized edge function
+export default async function handler(req) {
+    const routingDecision = await AI.predictOptimalRegion(req.userIP);
+    return fetch(\`https://\${routingDecision}.api.internal/data\`);
+}</code></pre>
+
+            <p>This level of intelligence was previously reserved for massive tech giants, but it is now accessible via standard cloud provider APIs.</p>
+
+            <h3>Conclusion</h3>
+            <p>The architecture of tomorrow isn't just about handling more traffic; it's about doing so with less cognitive load on the developer. By embracing serverless edge computing and AI optimization, we can focus on what truly matters: building great products.</p>
+        </article>
+
+        <!-- Tags & Bottom Actions -->
+        <div class="article-tags">
+            <a href="#" class="topic-tag">Software Engineering</a>
+            <a href="#" class="topic-tag">Architecture</a>
+            <a href="#" class="topic-tag">Serverless</a>
+            <a href="#" class="topic-tag">Technology</a>
+        </div>
+
+        <div class="article-actions bottom-actions">
+            <div class="actions-left">
+                <button class="action-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                    <span>4.2K</span>
+                </button>
+                <button class="action-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    <span>128</span>
+                </button>
+            </div>
+            <div class="actions-right">
+                <button class="action-btn" title="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

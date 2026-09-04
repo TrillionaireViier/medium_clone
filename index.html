@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Clone — Where good ideas find you.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 1043.63 592.71" width="45" height="25">
+                        <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94" fill="#000"/>
+                    </svg>
+                    <span class="logo-text">Medium</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link hidden-mobile">Our story</a>
+                <a href="#" class="nav-link hidden-mobile">Membership</a>
+                <a href="#" class="nav-link hidden-mobile">Write</a>
+                <a href="#" class="nav-link">Sign In</a>
+                <button class="btn-primary">Get started</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stay curious.</h1>
+            <p>Discover stories, thinking, and expertise from writers on any topic.</p>
+            <button class="btn-primary btn-large">Start reading</button>
+        </div>
+        <div class="hero-animation" id="hero-animation">
+            <!-- Dynamic M letters injected by JS -->
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                <span>Trending on Medium</span>
+            </div>
+            <div class="trending-grid" id="trending-grid">
+                <!-- Trending articles injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <main class="main-layout container">
+        <div class="feed-section">
+            <div class="feed-header">
+                <button class="feed-tab active">Following</button>
+                <button class="feed-tab">Recommended for you</button>
+            </div>
+            <div class="article-feed" id="article-feed">
+                <!-- Articles injected by JS -->
+            </div>
+        </div>
+        
+        <aside class="sidebar">
+            <div class="discover-topics">
+                <h3>Discover more of what matters to you</h3>
+                <div class="topic-tags">
+                    <a href="#" class="topic-tag">Programming</a>
+                    <a href="#" class="topic-tag">Data Science</a>
+                    <a href="#" class="topic-tag">Technology</a>
+                    <a href="#" class="topic-tag">Self Improvement</a>
+                    <a href="#" class="topic-tag">Writing</a>
+                    <a href="#" class="topic-tag">Relationships</a>
+                    <a href="#" class="topic-tag">Machine Learning</a>
+                    <a href="#" class="topic-tag">Productivity</a>
+                    <a href="#" class="topic-tag">Politics</a>
+                </div>
+                <a href="#" class="see-more">See more topics</a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Help</a>
+                <a href="#">Status</a>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Text to speech</a>
+                <a href="#">Teams</a>
+            </div>
+        </aside>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
