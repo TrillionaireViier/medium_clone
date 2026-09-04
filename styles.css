@@ -422,51 +422,52 @@ button {
     position: sticky;
     top: calc(var(--nav-height) + 40px);
     height: max-content;
+    align-self: start;
 }
 
 .discover-topics h3 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
 }
 
 .topic-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 10px;
+    margin-bottom: 24px;
 }
 
 .topic-tag {
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--text-secondary);
-    background: rgba(255,255,255,0.03);
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    transition: background 0.2s, color 0.2s;
+    background: rgba(255,255,255,0.04);
+    padding: 8px 14px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.2s ease;
 }
 
 .topic-tag:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
     color: var(--text-primary);
+    border-color: rgba(255,255,255,0.2);
 }
 
 .see-more {
     font-size: 14px;
     color: var(--brand-color);
-    display: block;
+    display: inline-block;
     margin-bottom: 40px;
-}
-
-.see-more:hover {
-    color: var(--brand-hover);
+    font-weight: 500;
 }
 
 .footer-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 16px 20px;
     border-top: 1px solid var(--border-dark);
     padding-top: 24px;
 }
@@ -669,7 +670,13 @@ button {
 @media (max-width: 1024px) {
     .main-layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 60px;
+    }
+
+    .sidebar {
+        position: static;
+        border-top: 1px solid var(--border-dark);
+        padding-top: 40px;
     }
 
     .hero-animation {
