@@ -121,7 +121,7 @@ function initHome() {
                         <img src="${article.avatar}" alt="${article.author}">
                         <span>${article.author}</span>
                     </div>
-                    <h3><a href="article.html">${article.title}</a></h3>
+                    <h3><a href="/article">${article.title}</a></h3>
                     <div class="meta">${article.date} · ${article.readTime}</div>
                 </div>
             </div>
@@ -138,7 +138,7 @@ function initHome() {
                         <img src="${article.avatar}" alt="${article.author}">
                         <span>${article.author}</span>
                     </div>
-                    <a href="article.html">
+                    <a href="/article">
                         <h2>${article.title}</h2>
                         <p>${article.snippet}</p>
                     </a>
@@ -153,7 +153,7 @@ function initHome() {
                         <button class="icon-btn" title="Save"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
                     </div>
                 </div>
-                <a href="article.html" class="feed-card-image">
+                <a href="/article" class="feed-card-image">
                     <img src="${article.image}" alt="${article.title}">
                 </a>
             </article>

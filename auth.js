@@ -74,7 +74,7 @@ function register(username, email, password) {
 
 function logout() {
     localStorage.removeItem('medium_current_user');
-    window.location.href = 'index.html';
+    window.location.href = '/';
 }
 
 function updateNavigationAuth() {
@@ -84,7 +84,7 @@ function updateNavigationAuth() {
     if (!navRight) return;
 
     if (user) {
-        let dashboardLink = user.role === 'admin' ? 'admin-dashboard.html' : 'user-dashboard.html';
+        let dashboardLink = user.role === 'admin' ? '/admin-dashboard' : '/user-dashboard';
         
         navRight.innerHTML = `
             <a href="#" class="nav-link hidden-mobile">Write</a>
@@ -111,8 +111,8 @@ function updateNavigationAuth() {
             <a href="#" class="nav-link hidden-mobile">Our story</a>
             <a href="#" class="nav-link hidden-mobile">Membership</a>
             <a href="#" class="nav-link hidden-mobile">Write</a>
-            <a href="login.html" class="nav-link">Sign In</a>
-            <a href="register.html" class="btn-primary">Get started</a>
+            <a href="/login" class="nav-link">Sign In</a>
+            <a href="/register" class="btn-primary">Get started</a>
         `;
     }
 }
