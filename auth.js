@@ -87,7 +87,7 @@ function updateNavigationAuth() {
         let dashboardLink = user.role === 'admin' ? '/admin-dashboard' : '/user-dashboard';
         
         navRight.innerHTML = `
-            <a href="#" class="nav-link hidden-mobile">Write</a>
+            <a href="/write" class="nav-link hidden-mobile">Write</a>
             <button class="icon-btn hidden-mobile" title="Notifications">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
             </button>
@@ -108,9 +108,9 @@ function updateNavigationAuth() {
         `;
     } else {
         navRight.innerHTML = `
-            <a href="#" class="nav-link hidden-mobile">Our story</a>
-            <a href="#" class="nav-link hidden-mobile">Membership</a>
-            <a href="#" class="nav-link hidden-mobile">Write</a>
+            <a href="/our-story" class="nav-link hidden-mobile">Our story</a>
+            <a href="/membership" class="nav-link hidden-mobile">Membership</a>
+            <a href="/write" class="nav-link hidden-mobile">Write</a>
             <a href="/login" class="nav-link">Sign In</a>
             <a href="/register" class="btn-primary">Get started</a>
         `;

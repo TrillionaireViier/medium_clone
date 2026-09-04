@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership — Medium Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+    <style>
+        .page-header { text-align: center; padding: 100px 20px; border-bottom: 1px solid var(--border-color); background: linear-gradient(180deg, rgba(168,85,247,0.1) 0%, var(--bg-primary) 100%); }
+        .page-header h1 { font-family: var(--font-serif); font-size: 64px; margin-bottom: 24px; color: var(--text-primary); }
+        .page-header p { font-size: 24px; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.4; }
+        .content-section { max-width: 800px; margin: 80px auto; padding: 0 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <header class="navbar reading-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="logo">
+                    <svg viewBox="0 0 1043.63 592.71" width="45" height="25">
+                        <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94" fill="var(--text-primary)"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-right" id="nav-right">
+                <!-- Injected by auth.js -->
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Fuel great thinking.</h1>
+        <p>Become a member to support writers and get unlimited access to the smartest ideas on the web.</p>
+        <button class="btn-primary btn-large" style="margin-top: 40px;">Get Unlimited Access</button>
+    </div>
+    
+    <div class="content-section">
+        <h2 style="font-family: var(--font-serif); font-size: 32px; margin-bottom: 20px;">Why join Medium?</h2>
+        <p style="font-size: 20px; color: var(--text-secondary); line-height: 1.6;">Read as much as you want without limits. Directly support the writers you love. Listen to any story on the go with our audio features.</p>
+    </div>
+
+    <!-- Site Footer -->
+    <footer style="background: var(--bg-secondary); padding: 40px 20px; border-top: 1px solid var(--border-dark); margin-top: 80px;">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div class="logo">
+                <svg viewBox="0 0 1043.63 592.71" width="45" height="25">
+                    <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94" fill="var(--text-secondary)"/>
+                </svg>
+            </div>
+            <div style="display: flex; gap: 20px; font-size: 14px;">
+                <a href="/our-story" style="color: var(--text-secondary);">Our Story</a>
+                <a href="/membership" style="color: var(--text-secondary);">Membership</a>
+                <a href="/write" style="color: var(--text-secondary);">Write</a>
+                <a href="/login" style="color: var(--text-secondary);">Sign In</a>
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted);">&copy; 2026 Medium Clone Project.</div>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>
